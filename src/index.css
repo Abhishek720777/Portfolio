@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-background: #020508;
+  --color-primary: #ffffff;
+  --color-muted: #888888;
+  --color-accent: #f0f0f0;
+  
+  --font-syne: 'Syne', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  color-scheme: dark;
+  background-color: #020508;
+  color: #ffffff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #020508;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  border-radius: 100px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+}
+
+@keyframes aurora2 {
+  0% {
+    transform: rotate(-3deg) translateX(0%);
+  }
+  50% {
+    transform: rotate(-3deg) translateX(-15%);
+  }
+  100% {
+    transform: rotate(-3deg) translateX(0%);
+  }
+}
+
+@keyframes float-grain {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-2%, -1%); }
+}
+
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flip-card-inner:hover {
+
+}
+
+.flippable .flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
